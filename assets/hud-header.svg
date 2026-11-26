@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="470" viewBox="0 0 1040 470" role="img" aria-label="Justine Smith C. Rendaje — Holographic HUD Profile Header">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="470" viewBox="0 0 1040 470" role="img" aria-label="Justine Smith C. Rendaje — Profile Header">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070a10"/>
       <stop offset="55%" stop-color="#0d1119"/>
       <stop offset="100%" stop-color="#131822"/>
     </linearGradient>
-    <radialGradient id="coreGlow" cx="21%" cy="50%" r="36%">
+    <radialGradient id="coreGlow" cx="21%" cy="52%" r="36%">
       <stop offset="0%" stop-color="#ed8326" stop-opacity="0.22"/>
       <stop offset="55%" stop-color="#f7a854" stop-opacity="0.07"/>
       <stop offset="100%" stop-color="#070a10" stop-opacity="0"/>
@@ -31,7 +31,7 @@
       <stop offset="100%" stop-color="#ed8326" stop-opacity="0.08"/>
     </linearGradient>
     <clipPath id="portraitClip">
-      <circle cx="212" cy="236" r="152"/>
+      <circle cx="212" cy="248" r="152"/>
     </clipPath>
     <filter id="glowSoft" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -44,9 +44,9 @@
       .mono { font-family: 'Consolas', 'SFMono-Regular', 'Cascadia Code', 'Liberation Mono', monospace; }
       .sans { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
       .ascii { font-family: 'Consolas', 'SFMono-Regular', 'Courier New', monospace; font-size: 7.4px; font-weight: 700; letter-spacing: 0.15px; }
-      .spin-cw { transform-origin: 212px 236px; animation: spinCW 34s linear infinite; }
-      .spin-ccw { transform-origin: 212px 236px; animation: spinCCW 22s linear infinite; }
-      .spin-slow { transform-origin: 212px 236px; animation: spinCW 54s linear infinite; }
+      .spin-cw { transform-origin: 212px 248px; animation: spinCW 34s linear infinite; }
+      .spin-ccw { transform-origin: 212px 248px; animation: spinCCW 22s linear infinite; }
+      .spin-slow { transform-origin: 212px 248px; animation: spinCW 54s linear infinite; }
       .scan-beam { animation: scanDown 4.4s ease-in-out infinite; }
       .blink { animation: blinkPulse 2.2s ease-in-out infinite; }
       .bar-pulse { animation: barGlow 2.8s ease-in-out infinite; }
@@ -58,18 +58,11 @@
         88% { opacity: 0.95; }
         100% { transform: translateY(165px); opacity: 0; }
       }
-      @keyframes blinkPulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.35; }
-      }
-      @keyframes barGlow {
-        0%, 100% { opacity: 0.88; }
-        50% { opacity: 0.42; }
-      }
+      @keyframes blinkPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+      @keyframes barGlow { 0%, 100% { opacity: 0.88; } 50% { opacity: 0.48; } }
     </style>
   </defs>
 
-  <!-- Deep Space Canvas -->
   <rect x="0.5" y="0.5" width="1039" height="469" rx="14" fill="url(#bgGrad)" stroke="#ed8326" stroke-opacity="0.45" stroke-width="1.2"/>
   <rect x="0.5" y="0.5" width="1039" height="469" rx="14" fill="url(#coreGlow)"/>
   <rect x="0.5" y="0.5" width="1039" height="469" rx="14" fill="url(#rightGlow)"/>
@@ -139,259 +132,229 @@
     <path d="M 996 454 L 1024 454 L 1024 432"/>
   </g>
 
-  <!-- Top System Telemetry Bar -->
+  <!-- Top Bar -->
   <g class="mono" font-size="10.5" letter-spacing="1.4">
     <circle cx="34" cy="31" r="4" fill="#ffd39e" class="blink" filter="url(#glowSoft)"/>
-    <text x="46" y="34.5" fill="#ffd39e" font-weight="700">HUD-OS // MARK VII TELEMETRY</text>
-    <text x="315" y="34.5" fill="#d99b66" opacity="0.85">SECTOR: ILOILO-PH [10.72N · 122.56E]</text>
-    <text x="720" y="34.5" fill="#f7a854" opacity="0.9">UPLINK: GITHUB.COM/TIN-AXLE</text>
+    <text x="46" y="34.5" fill="#ffd39e" font-weight="700">SECTOR: ILOILO-PH</text>
+    <text x="762" y="34.5" fill="#f7a854" opacity="0.9">GITHUB.COM/TIN-AXLE</text>
     <rect x="945" y="22" width="64" height="17" rx="3" fill="#ed8326" fill-opacity="0.16" stroke="#f7a854" stroke-opacity="0.7" stroke-width="0.9"/>
     <text x="977" y="34" fill="#ffe4be" text-anchor="middle" font-size="9.5" font-weight="700">ONLINE</text>
   </g>
   <line x1="22" y1="47" x2="1018" y2="47" stroke="url(#accentLine)" stroke-width="1"/>
 
-  <!-- ================= LEFT CHAMBER: HOLOGRAPHIC ASCII PORTRAIT ================= -->
+  <!-- LEFT CHAMBER: ORANGE ASCII PORTRAIT + HUD RINGS -->
   <g>
-    <!-- Backing Aperture -->
-    <circle cx="212" cy="236" r="154" fill="#080b12" stroke="#ed8326" stroke-opacity="0.4" stroke-width="1.2"/>
+    <circle cx="212" cy="248" r="154" fill="#080b12" stroke="#ed8326" stroke-opacity="0.4" stroke-width="1.2"/>
 
-    <!-- Rotating Outer Degree Ring -->
     <g class="spin-slow">
-    <line x1="380.0" y1="236.0" x2="394.0" y2="236.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="383.1" y1="254.0" x2="388.0" y2="254.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="380.2" y1="271.8" x2="385.1" y2="272.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="375.6" y1="289.2" x2="380.3" y2="290.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="369.1" y1="306.0" x2="373.7" y2="308.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="357.5" y1="320.0" x2="369.6" y2="327.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="351.2" y1="337.1" x2="355.2" y2="340.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="339.8" y1="351.1" x2="343.5" y2="354.4" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="327.1" y1="363.8" x2="330.4" y2="367.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="313.1" y1="375.2" x2="316.0" y2="379.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="296.0" y1="381.5" x2="303.0" y2="393.6" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="282.0" y1="393.1" x2="284.0" y2="397.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="265.2" y1="399.6" x2="266.7" y2="404.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="247.8" y1="404.2" x2="248.8" y2="409.1" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="230.0" y1="407.1" x2="230.5" y2="412.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="212.0" y1="404.0" x2="212.0" y2="418.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="194.0" y1="407.1" x2="193.5" y2="412.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="176.2" y1="404.2" x2="175.2" y2="409.1" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="158.8" y1="399.6" x2="157.3" y2="404.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="142.0" y1="393.1" x2="140.0" y2="397.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="128.0" y1="381.5" x2="121.0" y2="393.6" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="110.9" y1="375.2" x2="108.0" y2="379.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="96.9" y1="363.8" x2="93.6" y2="367.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="84.2" y1="351.1" x2="80.5" y2="354.4" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="72.8" y1="337.1" x2="68.8" y2="340.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="66.5" y1="320.0" x2="54.4" y2="327.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="54.9" y1="306.0" x2="50.3" y2="308.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="48.4" y1="289.2" x2="43.7" y2="290.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="43.8" y1="271.8" x2="38.9" y2="272.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="40.9" y1="254.0" x2="36.0" y2="254.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="44.0" y1="236.0" x2="30.0" y2="236.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="40.9" y1="218.0" x2="36.0" y2="217.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="43.8" y1="200.2" x2="38.9" y2="199.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="48.4" y1="182.8" x2="43.7" y2="181.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="54.9" y1="166.0" x2="50.3" y2="164.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="66.5" y1="152.0" x2="54.4" y2="145.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="72.8" y1="134.9" x2="68.8" y2="132.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="84.2" y1="120.9" x2="80.5" y2="117.6" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="96.9" y1="108.2" x2="93.6" y2="104.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="110.9" y1="96.8" x2="108.0" y2="92.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="128.0" y1="90.5" x2="121.0" y2="78.4" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="142.0" y1="78.9" x2="140.0" y2="74.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="158.8" y1="72.4" x2="157.3" y2="67.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="176.2" y1="67.8" x2="175.2" y2="62.9" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="194.0" y1="64.9" x2="193.5" y2="60.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="212.0" y1="68.0" x2="212.0" y2="54.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="230.0" y1="64.9" x2="230.5" y2="60.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="247.8" y1="67.8" x2="248.8" y2="62.9" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="265.2" y1="72.4" x2="266.7" y2="67.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="282.0" y1="78.9" x2="284.0" y2="74.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="296.0" y1="90.5" x2="303.0" y2="78.4" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="313.1" y1="96.8" x2="316.0" y2="92.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="327.1" y1="108.2" x2="330.4" y2="104.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="339.8" y1="120.9" x2="343.5" y2="117.6" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="351.2" y1="134.9" x2="355.2" y2="132.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="357.5" y1="152.0" x2="369.6" y2="145.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
-    <line x1="369.1" y1="166.0" x2="373.7" y2="164.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="375.6" y1="182.8" x2="380.3" y2="181.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="380.2" y1="200.2" x2="385.1" y2="199.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
-    <line x1="383.1" y1="218.0" x2="388.0" y2="217.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="380.0" y1="248.0" x2="394.0" y2="248.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="383.1" y1="266.0" x2="388.0" y2="266.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="380.2" y1="283.8" x2="385.1" y2="284.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="375.6" y1="301.2" x2="380.3" y2="302.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="369.1" y1="318.0" x2="373.7" y2="320.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="357.5" y1="332.0" x2="369.6" y2="339.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="351.2" y1="349.1" x2="355.2" y2="352.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="339.8" y1="363.1" x2="343.5" y2="366.4" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="327.1" y1="375.8" x2="330.4" y2="379.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="313.1" y1="387.2" x2="316.0" y2="391.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="296.0" y1="393.5" x2="303.0" y2="405.6" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="282.0" y1="405.1" x2="284.0" y2="409.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="265.2" y1="411.6" x2="266.7" y2="416.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="247.8" y1="416.2" x2="248.8" y2="421.1" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="230.0" y1="419.1" x2="230.5" y2="424.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="212.0" y1="416.0" x2="212.0" y2="430.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="194.0" y1="419.1" x2="193.5" y2="424.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="176.2" y1="416.2" x2="175.2" y2="421.1" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="158.8" y1="411.6" x2="157.3" y2="416.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="142.0" y1="405.1" x2="140.0" y2="409.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="128.0" y1="393.5" x2="121.0" y2="405.6" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="110.9" y1="387.2" x2="108.0" y2="391.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="96.9" y1="375.8" x2="93.6" y2="379.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="84.2" y1="363.1" x2="80.5" y2="366.4" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="72.8" y1="349.1" x2="68.8" y2="352.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="66.5" y1="332.0" x2="54.4" y2="339.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="54.9" y1="318.0" x2="50.3" y2="320.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="48.4" y1="301.2" x2="43.7" y2="302.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="43.8" y1="283.8" x2="38.9" y2="284.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="40.9" y1="266.0" x2="36.0" y2="266.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="44.0" y1="248.0" x2="30.0" y2="248.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="40.9" y1="230.0" x2="36.0" y2="229.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="43.8" y1="212.2" x2="38.9" y2="211.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="48.4" y1="194.8" x2="43.7" y2="193.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="54.9" y1="178.0" x2="50.3" y2="176.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="66.5" y1="164.0" x2="54.4" y2="157.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="72.8" y1="146.9" x2="68.8" y2="144.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="84.2" y1="132.9" x2="80.5" y2="129.6" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="96.9" y1="120.2" x2="93.6" y2="116.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="110.9" y1="108.8" x2="108.0" y2="104.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="128.0" y1="102.5" x2="121.0" y2="90.4" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="142.0" y1="90.9" x2="140.0" y2="86.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="158.8" y1="84.4" x2="157.3" y2="79.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="176.2" y1="79.8" x2="175.2" y2="74.9" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="194.0" y1="76.9" x2="193.5" y2="72.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="212.0" y1="80.0" x2="212.0" y2="66.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="230.0" y1="76.9" x2="230.5" y2="72.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="247.8" y1="79.8" x2="248.8" y2="74.9" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="265.2" y1="84.4" x2="266.7" y2="79.7" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="282.0" y1="90.9" x2="284.0" y2="86.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="296.0" y1="102.5" x2="303.0" y2="90.4" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="313.1" y1="108.8" x2="316.0" y2="104.8" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="327.1" y1="120.2" x2="330.4" y2="116.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="339.8" y1="132.9" x2="343.5" y2="129.6" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="351.2" y1="146.9" x2="355.2" y2="144.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="357.5" y1="164.0" x2="369.6" y2="157.0" stroke="#ffd39e" stroke-width="1.5" opacity="0.85"/>
+    <line x1="369.1" y1="178.0" x2="373.7" y2="176.0" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="375.6" y1="194.8" x2="380.3" y2="193.3" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="380.2" y1="212.2" x2="385.1" y2="211.2" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
+    <line x1="383.1" y1="230.0" x2="388.0" y2="229.5" stroke="#ed8326" stroke-width="0.8" opacity="0.4"/>
 
     </g>
 
-    <!-- Rotating Dashed Arc Ring (CW) -->
     <g class="spin-cw" fill="none">
-      <circle cx="212" cy="236" r="189" stroke="#f7a854" stroke-opacity="0.42" stroke-width="1.4" stroke-dasharray="48 18 14 24 80 20"/>
-      <circle cx="212" cy="236" r="161" stroke="#ffd39e" stroke-opacity="0.65" stroke-width="2" stroke-dasharray="32 95 16 110"/>
+      <circle cx="212" cy="248" r="189" stroke="#f7a854" stroke-opacity="0.42" stroke-width="1.4" stroke-dasharray="48 18 14 24 80 20"/>
+      <circle cx="212" cy="248" r="161" stroke="#ffd39e" stroke-opacity="0.65" stroke-width="2" stroke-dasharray="32 95 16 110"/>
     </g>
 
-    <!-- Counter-Rotating Inner Targeting Ring (CCW) -->
     <g class="spin-ccw" fill="none">
-      <circle cx="212" cy="236" r="156" stroke="#ed8326" stroke-opacity="0.75" stroke-width="1.2" stroke-dasharray="12 8 3 8"/>
-      <circle cx="212" cy="236" r="196" stroke="#ed8326" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="6 14"/>
+      <circle cx="212" cy="248" r="156" stroke="#ed8326" stroke-opacity="0.75" stroke-width="1.2" stroke-dasharray="12 8 3 8"/>
+      <circle cx="212" cy="248" r="196" stroke="#ed8326" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="6 14"/>
     </g>
 
-    <!-- 4-Quadrant Targeting Reticles -->
     <g stroke="#ffd39e" stroke-width="1.3" opacity="0.75">
-      <line x1="212" y1="40" x2="212" y2="70"/>
-      <line x1="212" y1="402" x2="212" y2="432"/>
-      <line x1="16" y1="236" x2="46" y2="236"/>
-      <line x1="378" y1="236" x2="408" y2="236"/>
+      <line x1="212" y1="52" x2="212" y2="82"/>
+      <line x1="212" y1="414" x2="212" y2="444"/>
+      <line x1="16" y1="248" x2="46" y2="248"/>
+      <line x1="378" y1="248" x2="408" y2="248"/>
     </g>
 
-    <!-- Orange ASCII Portrait Art (Clipped to Circular HUD Lens) -->
     <g clip-path="url(#portraitClip)">
       <g class="ascii">
-      <text x="68" y="89.0" xml:space="preserve">                                                                </text>
-      <text x="68" y="96.6" xml:space="preserve">                                 <tspan fill="#d98029">::</tspan><tspan fill="#bd722b">::....</tspan><tspan fill="#9e612a">.</tspan>                      </text>
-      <text x="68" y="104.2" xml:space="preserve">                  <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::</tspan> <tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-----==----</tspan><tspan fill="#d98029">--:::</tspan><tspan fill="#bd722b">:..</tspan><tspan fill="#9e612a">.</tspan>                  </text>
-      <text x="68" y="111.8" xml:space="preserve">               <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:-</tspan><tspan fill="#ed8326">---</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+++++=</tspan><tspan fill="#ed8326">=---</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">:..</tspan>               </text>
-      <text x="68" y="119.4" xml:space="preserve">            <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">.:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">-==</tspan><tspan fill="#f59c42">==+++</tspan> <tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">****++++</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+**++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">==-</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">..</tspan>             </text>
-      <text x="68" y="127.0" xml:space="preserve">          <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">.:</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-==</tspan><tspan fill="#f59c42">==+++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=+=</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">++==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">****++</tspan><tspan fill="#f59c42">+==</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">..</tspan>           </text>
-      <text x="68" y="134.6" xml:space="preserve">         <tspan fill="#bd722b">.:</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-==</tspan><tspan fill="#f59c42">=+++++++==++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">****++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">..</tspan>         </text>
-      <text x="68" y="142.2" xml:space="preserve">        <tspan fill="#bd722b">.</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">-==</tspan><tspan fill="#f59c42">=+++++++===</tspan><tspan fill="#ed8326">-=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+*+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+**</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">*</tspan> <tspan fill="#f9b566">+*</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">*****+++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">::</tspan><tspan fill="#bd722b">.</tspan>        </text>
-      <text x="68" y="149.8" xml:space="preserve">      <tspan fill="#bd722b">..</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">===</tspan><tspan fill="#f59c42">=++++++++++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">**+</tspan><tspan fill="#f59c42">+++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">++*</tspan><tspan fill="#fccb8d">*</tspan>   <tspan fill="#f9b566">**++++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">..</tspan>      </text>
-      <text x="68" y="157.4" xml:space="preserve">     <tspan fill="#bd722b">.:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==+===+++++++++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">++++</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">=++</tspan><tspan fill="#f9b566">**</tspan> <tspan fill="#f9b566">+**++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan>     </text>
-      <text x="68" y="165.0" xml:space="preserve">    <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">==++=++++++++++++++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++++++=++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan> <tspan fill="#d98029">-</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+*++++++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan>    </text>
-      <text x="68" y="172.6" xml:space="preserve">   <tspan fill="#bd722b">.:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">-=</tspan><tspan fill="#f59c42">=+++++++++++++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#f9b566">+++</tspan><tspan fill="#f59c42">+==+++==++</tspan> <tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f9b566">+**++++++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan>   </text>
-      <text x="68" y="180.2" xml:space="preserve">  <tspan fill="#bd722b">..</tspan> <tspan fill="#d98029">-</tspan><tspan fill="#f59c42">==++++++++++++++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=++==+==+++==+</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#f59c42">+++=+</tspan><tspan fill="#f9b566">**+++++++++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan>   </text>
-      <text x="68" y="187.8" xml:space="preserve">   <tspan fill="#bd722b">:</tspan><tspan fill="#d98029">:-</tspan><tspan fill="#f59c42">++=+++++++++++++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">+==++===</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+*+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f9b566">+*+</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#f9b566">*+++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">.</tspan>  </text>
-      <text x="68" y="195.4" xml:space="preserve">  <tspan fill="#bd722b">.</tspan><tspan fill="#d98029">:-</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">+=++++++++++++=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+===+=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=====</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#####</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#f9b566">*+++++++++++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">..</tspan> </text>
-      <text x="68" y="203.0" xml:space="preserve">  <tspan fill="#bd722b">...</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">*+</tspan><tspan fill="#f59c42">+++++++=+++===+++==</tspan><tspan fill="#ed8326">=-=--==</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@@@@@@@</tspan><tspan fill="#f9b566">*++++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">.</tspan> </text>
-      <text x="68" y="210.6" xml:space="preserve"> <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">..:</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#f59c42">+++++++==+++====</tspan><tspan fill="#ed8326">==-</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=+=</tspan><tspan fill="#fff1db">@@@@@@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#f9b566">*++++++++++++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan> </text>
-      <text x="68" y="218.2" xml:space="preserve"> <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#f9b566">**+</tspan><tspan fill="#f59c42">++++++=+++=+==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">===+</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fff1db">@@@@@@@@@</tspan><tspan fill="#f9b566">*++++++++++++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan></text>
-      <text x="68" y="225.8" xml:space="preserve"> <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=++=+++++++===+====</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f59c42">++=</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#fff1db">@@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#f9b566">**++++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#bd722b">:.</tspan></text>
-      <text x="68" y="233.4" xml:space="preserve"> <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">::::</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">++====++=+++</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">**+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@@@@@</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">++++++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-</tspan><tspan fill="#bd722b">:.</tspan></text>
-      <text x="68" y="241.0" xml:space="preserve"> <tspan fill="#bd722b">..</tspan><tspan fill="#d98029">::::::</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+++=====+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#fff1db">@@@@@@@@@@@@@@</tspan><tspan fill="#f9b566">+*++++++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#bd722b">:.</tspan></text>
-      <text x="68" y="248.6" xml:space="preserve"> <tspan fill="#bd722b">..</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">:</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=======+==</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@@@</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fff1db">@@@@@@@</tspan><tspan fill="#f9b566">**++++++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan></text>
-      <text x="68" y="256.2" xml:space="preserve"> <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#f59c42">=</tspan> <tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=======+=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@@@@@@</tspan><tspan fill="#f9b566">**+++++++++++++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan><tspan fill="#9e612a">.</tspan></text>
-      <text x="68" y="263.8" xml:space="preserve"> <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#f59c42">==</tspan> <tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">+==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">======</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fff1db">@@@@@@@@@@@@</tspan><tspan fill="#f9b566">***++++++++++++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan> </text>
-      <text x="68" y="271.4" xml:space="preserve"> <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">..</tspan><tspan fill="#d98029">::::::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>    <tspan fill="#f59c42">++=</tspan><tspan fill="#ed8326">==-=-</tspan><tspan fill="#f59c42">====+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@@@@@@@@@</tspan><tspan fill="#f9b566">+*</tspan> <tspan fill="#f9b566">*+++++++++++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">.</tspan> </text>
-      <text x="68" y="279.0" xml:space="preserve">  <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>     <tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">==-</tspan><tspan fill="#f59c42">======</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fff1db">@@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">%@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+++***+++**++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan>  </text>
-      <text x="68" y="286.6" xml:space="preserve">  <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">..</tspan><tspan fill="#d98029">::::::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>     <tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=======</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#fff1db">@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+****++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#bd722b">:.</tspan>  </text>
-      <text x="68" y="294.2" xml:space="preserve">   <tspan fill="#bd722b">...</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>      <tspan fill="#f9b566">+*+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">======+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@@</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#f59c42">=++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+****</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">.</tspan>   </text>
-      <text x="68" y="301.8" xml:space="preserve">    <tspan fill="#bd722b">...</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>      <tspan fill="#f9b566">+*+</tspan><tspan fill="#ed8326">===</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#fff1db">@@@@@</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">====</tspan><tspan fill="#f59c42">==+=</tspan><tspan fill="#f9b566">+***</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:.</tspan>   </text>
-      <text x="68" y="309.4" xml:space="preserve">     <tspan fill="#bd722b">...</tspan><tspan fill="#d98029">:::::</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>       <tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=====</tspan><tspan fill="#ed8326">-=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">==---</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">+=++=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">.</tspan>     </text>
-      <text x="68" y="317.0" xml:space="preserve">      <tspan fill="#bd722b">...:</tspan><tspan fill="#d98029">:::</tspan><tspan fill="#f59c42">==</tspan>    <tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">+*+</tspan><tspan fill="#f59c42">=====+++</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#*</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">======</tspan><tspan fill="#f59c42">=+=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">.</tspan>      </text>
-      <text x="68" y="324.6" xml:space="preserve">       <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">...:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#f59c42">==</tspan> <tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+++</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=======+++++++=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">..</tspan>       </text>
-      <text x="68" y="332.2" xml:space="preserve">         <tspan fill="#bd722b">....</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=++</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+++</tspan><tspan fill="#f59c42">++++====++++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+++++++++++</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">..</tspan>        </text>
-      <text x="68" y="339.8" xml:space="preserve">           <tspan fill="#bd722b">.</tspan><tspan fill="#d98029">:-</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#f59c42">+++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+====</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++++</tspan><tspan fill="#f9b566">++++</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#d98029">::</tspan><tspan fill="#bd722b">..</tspan>          </text>
-      <text x="68" y="347.4" xml:space="preserve">           <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">.</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">---==</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">===+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+++++=</tspan><tspan fill="#ed8326">==-</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">..</tspan>            </text>
-      <text x="68" y="355.0" xml:space="preserve">             <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">::-</tspan><tspan fill="#ed8326">--=</tspan><tspan fill="#f59c42">++++++</tspan><tspan fill="#f9b566">*+</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+===</tspan><tspan fill="#ed8326">=--</tspan><tspan fill="#d98029">-::</tspan><tspan fill="#bd722b">:..</tspan>              </text>
-      <text x="68" y="362.6" xml:space="preserve">                <tspan fill="#bd722b">..:</tspan><tspan fill="#d98029">:::-</tspan><tspan fill="#ed8326">--=-=</tspan><tspan fill="#f59c42">=+=+=</tspan><tspan fill="#ed8326">-===---</tspan><tspan fill="#d98029">--::</tspan><tspan fill="#bd722b">:..</tspan><tspan fill="#9e612a">.</tspan>                </text>
-      <text x="68" y="370.2" xml:space="preserve">                   <tspan fill="#bd722b">....</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">:</tspan><tspan fill="#d98029">::::-</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">--:-::::</tspan><tspan fill="#bd722b">:....</tspan>                    </text>
-      <text x="68" y="377.8" xml:space="preserve">                        <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">..............</tspan>                         </text>
-      <text x="68" y="385.4" xml:space="preserve">                                                                </text>
+      <text x="68" y="101.0" xml:space="preserve">                                                                </text>
+      <text x="68" y="108.6" xml:space="preserve">                                                                </text>
+      <text x="68" y="116.2" xml:space="preserve">                             <tspan fill="#ed8326">-------</tspan><tspan fill="#d98029">--</tspan>                          </text>
+      <text x="68" y="123.8" xml:space="preserve">                         <tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">====</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=++++==</tspan><tspan fill="#ed8326">==--</tspan>                      </text>
+      <text x="68" y="131.4" xml:space="preserve">                     <tspan fill="#f59c42">======</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==----=</tspan><tspan fill="#f59c42">=+++===</tspan><tspan fill="#ed8326">-</tspan>                    </text>
+      <text x="68" y="139.0" xml:space="preserve">                   <tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">==---</tspan><tspan fill="#d98029">--</tspan><tspan fill="#ed8326">---=</tspan><tspan fill="#f59c42">=+===</tspan><tspan fill="#ed8326">=</tspan>                  </text>
+      <text x="68" y="146.6" xml:space="preserve">                 <tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">=-=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">--====</tspan><tspan fill="#f59c42">====</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">---</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>               </text>
+      <text x="68" y="154.2" xml:space="preserve">                <tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">---=--</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">====</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">=+=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-==--</tspan><tspan fill="#f59c42">=+=</tspan><tspan fill="#ed8326">--==</tspan>              </text>
+      <text x="68" y="161.8" xml:space="preserve">               <tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=---=--</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-===</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-===--=</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=--=</tspan>              </text>
+      <text x="68" y="169.4" xml:space="preserve">              <tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#ed8326">==---==</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#ffe0b5">#%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">*+</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">===-==</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#ed8326">=-=</tspan>              </text>
+      <text x="68" y="177.0" xml:space="preserve">             <tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">::-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">===</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*#</tspan><tspan fill="#ffe0b5">%%%%%%#</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">==-=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">==</tspan>              </text>
+      <text x="68" y="184.6" xml:space="preserve">            <tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">---</tspan><tspan fill="#d98029">-</tspan><tspan fill="#ed8326">-=====</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#%%%%%%%%%#</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#ed8326">=====</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>              </text>
+      <text x="68" y="192.2" xml:space="preserve">           <tspan fill="#f59c42">==+=</tspan><tspan fill="#ed8326">==---</tspan><tspan fill="#f59c42">====+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#ffe0b5">#%%%%%%%</tspan><tspan fill="#fff1db">%</tspan><tspan fill="#ffe0b5">%%%#</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=</tspan><tspan fill="#ed8326">===</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>              </text>
+      <text x="68" y="199.8" xml:space="preserve">           <tspan fill="#f59c42">==+==</tspan><tspan fill="#ed8326">=--</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">%@@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f59c42">+=+</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>              </text>
+      <text x="68" y="207.4" xml:space="preserve">           <tspan fill="#ed8326">==</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">==--</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==+=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*#</tspan><tspan fill="#ffe0b5">#%</tspan><tspan fill="#fff1db">@@%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">==</tspan><tspan fill="#f9b566">++**</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>              </text>
+      <text x="68" y="215.0" xml:space="preserve">            <tspan fill="#f59c42">=+=</tspan><tspan fill="#ed8326">--=-=</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">+**++</tspan><tspan fill="#f59c42">+=+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">++</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#fccb8d">*#</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">+=</tspan>               </text>
+      <text x="68" y="222.6" xml:space="preserve">            <tspan fill="#f59c42">==+=</tspan><tspan fill="#ed8326">====</tspan><tspan fill="#fccb8d">*#*</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">##*</tspan><tspan fill="#f59c42">=+</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#ffe0b5">#%%</tspan><tspan fill="#fccb8d">#*</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f59c42">==</tspan>                </text>
+      <text x="68" y="230.2" xml:space="preserve">             <tspan fill="#f59c42">==</tspan><tspan fill="#fccb8d">**</tspan><tspan fill="#f9b566">***</tspan><tspan fill="#fff1db">@@@</tspan><tspan fill="#ffe0b5">%%#</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">##%</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%%%%%</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%#</tspan><tspan fill="#f59c42">=</tspan>                </text>
+      <text x="68" y="237.8" xml:space="preserve">              <tspan fill="#f59c42">=+</tspan><tspan fill="#ffe0b5">%%%%</tspan><tspan fill="#fff1db">@@@@@@@@@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%%%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%##%#</tspan><tspan fill="#f59c42">+</tspan>                </text>
+      <text x="68" y="245.4" xml:space="preserve">              <tspan fill="#f59c42">=</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fff1db">@@@@@@@@@@@@%</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@@</tspan><tspan fill="#ffe0b5">%#</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">###%%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#%</tspan><tspan fill="#f59c42">=</tspan>                </text>
+      <text x="68" y="253.0" xml:space="preserve">              <tspan fill="#f59c42">=</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">%@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%%%%%%</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#ed8326">=</tspan>                </text>
+      <text x="68" y="260.6" xml:space="preserve">               <tspan fill="#f59c42">=</tspan><tspan fill="#fff1db">@@@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">@@@@@@@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">*####</tspan><tspan fill="#ffe0b5">#%%%%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#f59c42">=</tspan>                 </text>
+      <text x="68" y="268.2" xml:space="preserve">                <tspan fill="#f59c42">=</tspan><tspan fill="#fff1db">@@@@@@@@@@@@@@@@</tspan><tspan fill="#ffe0b5">%%%#%%###%#</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan>                 </text>
+      <text x="68" y="275.8" xml:space="preserve">                 <tspan fill="#f59c42">=</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@@@@@@@@@</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fccb8d">###**###</tspan><tspan fill="#ffe0b5">#%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ed8326">=</tspan>                   </text>
+      <text x="68" y="283.4" xml:space="preserve">                  <tspan fill="#f59c42">=++</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fff1db">@@@@@@</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#ffe0b5">%#</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">#%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#%</tspan><tspan fill="#f59c42">+</tspan>                    </text>
+      <text x="68" y="291.0" xml:space="preserve">                      <tspan fill="#f59c42">=</tspan><tspan fill="#fff1db">%@@@@%@@@%</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fccb8d">###</tspan><tspan fill="#ffe0b5">#####</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ed8326">=</tspan>                    </text>
+      <text x="68" y="298.6" xml:space="preserve">                      <tspan fill="#ed8326">=</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fff1db">@@@@@@@@</tspan><tspan fill="#ffe0b5">%%%%%%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">*</tspan>                     </text>
+      <text x="68" y="306.2" xml:space="preserve">                       <tspan fill="#f9b566">+</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#fff1db">%@@@@@@%</tspan><tspan fill="#ffe0b5">%%%#</tspan><tspan fill="#fccb8d">*##</tspan>                     </text>
+      <text x="68" y="313.8" xml:space="preserve">                      <tspan fill="#f59c42">=+</tspan><tspan fill="#fff1db">@@@</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#%%%#</tspan><tspan fill="#fccb8d">##*</tspan><tspan fill="#f9b566">***</tspan><tspan fill="#fccb8d">###</tspan><tspan fill="#ed8326">=</tspan>                    </text>
+      <text x="68" y="321.4" xml:space="preserve">                     <tspan fill="#f59c42">==+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fff1db">@@@%</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#*</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">++=+</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#%%</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan>                   </text>
+      <text x="68" y="329.0" xml:space="preserve">                    <tspan fill="#f59c42">==</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">+=+</tspan><tspan fill="#fff1db">@@%</tspan><tspan fill="#ffe0b5">%%%%</tspan><tspan fill="#fccb8d">####</tspan><tspan fill="#ffe0b5">%##</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#fff1db">%</tspan><tspan fill="#f59c42">++==</tspan>                  </text>
+      <text x="68" y="336.6" xml:space="preserve">                   <tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">===</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#fff1db">@@</tspan><tspan fill="#ffe0b5">%%%#</tspan><tspan fill="#fccb8d">######</tspan><tspan fill="#ffe0b5">%%</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+=</tspan>                 </text>
+      <text x="68" y="344.2" xml:space="preserve">                 <tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">==--=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">*</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%%#</tspan><tspan fill="#fccb8d">####</tspan><tspan fill="#ffe0b5">##</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++==</tspan><tspan fill="#ed8326">=</tspan>             </text>
+      <text x="68" y="351.8" xml:space="preserve">              <tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">--</tspan><tspan fill="#ed8326">--==</tspan><tspan fill="#d98029">:::</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%%%%###%</tspan><tspan fill="#f9b566">*+</tspan><tspan fill="#ed8326">----</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">:.</tspan>          </text>
+      <text x="68" y="359.4" xml:space="preserve">           <tspan fill="#bd722b">..</tspan><tspan fill="#d98029">::::-</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">--:-</tspan><tspan fill="#ed8326">-=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">----</tspan><tspan fill="#f9b566">**</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%%#</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">*+</tspan><tspan fill="#ed8326">=----</tspan><tspan fill="#d98029">--::</tspan><tspan fill="#bd722b">:.</tspan>           </text>
+      <text x="68" y="367.0" xml:space="preserve">             <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">....</tspan><tspan fill="#d98029">::</tspan><tspan fill="#ed8326">--</tspan><tspan fill="#d98029">--</tspan><tspan fill="#ed8326">--=</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">+*</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fff1db">@</tspan><tspan fill="#ffe0b5">%##%</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#fccb8d">*</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#ed8326">=-</tspan><tspan fill="#d98029">-:</tspan><tspan fill="#bd722b">...</tspan>              </text>
+      <text x="68" y="374.6" xml:space="preserve">                 <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">.</tspan><tspan fill="#d98029">:::::::</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">==</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">#</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#f59c42">++</tspan><tspan fill="#fccb8d">#</tspan><tspan fill="#ffe0b5">%</tspan><tspan fill="#fccb8d">##</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#f59c42">=</tspan><tspan fill="#ed8326">==-</tspan><tspan fill="#d98029">::</tspan><tspan fill="#bd722b">..</tspan>                 </text>
+      <text x="68" y="382.2" xml:space="preserve">                    <tspan fill="#bd722b">......</tspan><tspan fill="#d98029">:--</tspan><tspan fill="#f59c42">+=+==</tspan><tspan fill="#d98029">:</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#f9b566">+</tspan><tspan fill="#ed8326">=</tspan><tspan fill="#d98029">::::</tspan><tspan fill="#bd722b">:.</tspan>                    </text>
+      <text x="68" y="389.8" xml:space="preserve">                          <tspan fill="#9e612a">.</tspan><tspan fill="#bd722b">...</tspan><tspan fill="#d98029">:::</tspan><tspan fill="#ed8326">-</tspan><tspan fill="#d98029">-</tspan><tspan fill="#bd722b">:</tspan><tspan fill="#d98029">:</tspan><tspan fill="#bd722b">....</tspan>                       </text>
+      <text x="68" y="397.4" xml:space="preserve">                                                                </text>
       </g>
-      <!-- Animated Holographic Scan Beam -->
-      <rect x="60" y="218" width="304" height="36" fill="url(#scanGrad)" class="scan-beam"/>
-      <!-- Subtle CRT Scanlines -->
-      <line x1="60" y1="236" x2="364" y2="236" stroke="#ffe0b5" stroke-opacity="0.09" stroke-width="1"/>
-    </g>
-
-    <!-- HUD Micro Readouts Around Portrait Ring -->
-    <g class="mono" font-size="8.6" fill="#f7b368" letter-spacing="0.9">
-      <text x="24" y="68" opacity="0.9">BIO-ID // VERIFIED</text>
-      <text x="24" y="80" fill="#d99b66" opacity="0.8">RES: 64x40 ASCII</text>
-      <text x="24" y="438" opacity="0.9">TARGET: LOCKED</text>
-      <text x="322" y="438" fill="#ffd39e" opacity="0.85">SIG 99.4%</text>
+      <rect x="60" y="230" width="304" height="36" fill="url(#scanGrad)" class="scan-beam"/>
     </g>
   </g>
 
-  <!-- ================= RIGHT CHAMBER: STARK IDENTITY TELEMETRY ================= -->
+  <!-- RIGHT CHAMBER: PROFILE SUMMARY -->
   <g>
-    <!-- Classification Tag -->
-    <rect x="432" y="68" width="212" height="22" rx="4" fill="#ed8326" fill-opacity="0.14" stroke="#f7a854" stroke-opacity="0.55" stroke-width="1"/>
-    <text x="444" y="83" class="mono" font-size="10.2" fill="#ffd39e" letter-spacing="1.4" font-weight="700">IDENTITY // PROFILE DOSSIER</text>
+    <rect x="432" y="68" width="146" height="22" rx="4" fill="#ed8326" fill-opacity="0.14" stroke="#f7a854" stroke-opacity="0.55" stroke-width="1"/>
+    <text x="505" y="83" text-anchor="middle" class="mono" font-size="10.2" fill="#ffd39e" letter-spacing="1.4" font-weight="700">DEVELOPER PROFILE</text>
 
-    <text x="660" y="83" class="mono" font-size="10" fill="#d99b66" letter-spacing="1">HANDLE: <tspan fill="#ffe4be" font-weight="700">@Tin-axle</tspan></text>
+    <text x="596" y="83" class="mono" font-size="10" fill="#d99b66" letter-spacing="1">GITHUB: <tspan fill="#ffe4be" font-weight="700">@Tin-axle</tspan></text>
 
-    <!-- Hero Name -->
     <text x="432" y="132" class="sans" font-size="33" font-weight="800" letter-spacing="1.2" fill="url(#nameGrad)" filter="url(#glowSoft)">JUSTINE SMITH C. RENDAJE</text>
 
-    <!-- Glowing Accent Rule -->
     <line x1="432" y1="145" x2="1008" y2="145" stroke="url(#accentLine)" stroke-width="1.6"/>
 
-    <!-- Professional Title -->
     <text x="432" y="170" class="mono" font-size="13.2" fill="#ffe2ba" letter-spacing="0.8" font-weight="600">CS STUDENT  ·  FULL-STACK DEVELOPER  ·  TECHNICAL PROJECT LEAD</text>
 
-    <!-- Education & Location Telemetry -->
     <g class="mono" font-size="11.2" fill="#e6b07a">
       <text x="432" y="196"><tspan fill="#ed8326" font-weight="700">&gt; EDU:</tspan>  BS Computer Science · University of San Agustin (2023 – 2027)</text>
       <text x="432" y="216"><tspan fill="#ed8326" font-weight="700">&gt; LEAD:</tspan> Tech Dept Lead (ADS) · Ex-CEO (ADS) · VP Finance (ICS) · Tech Officer (Holotech)</text>
-      <text x="432" y="236"><tspan fill="#ed8326" font-weight="700">&gt; BASE:</tspan> Iloilo City, Philippines  ·  justinerendaje.vercel.app</text>
+      <text x="432" y="236"><tspan fill="#ed8326" font-weight="700">&gt; WEB:</tspan>  Iloilo City, Philippines  ·  justinerendaje.vercel.app</text>
     </g>
 
-    <!-- 4 Beveled Stark Telemetry Metric Cards -->
     <g transform="translate(432, 256)">
-      <!-- Card 1 -->
       <polygon points="0,8 8,0 134,0 134,74 126,82 0,82" fill="#121824" fill-opacity="0.9" stroke="#ed8326" stroke-opacity="0.55" stroke-width="1.1"/>
-      <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.2">CONTRIBS / YR</text>
-      <text x="14" y="54" class="sans" font-size="27" font-weight="800" fill="#ffe4be">527</text>
+      <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.1">CONTRIBUTIONS</text>
+      <text x="14" y="54" class="sans" font-size="27" font-weight="800" fill="#ffe4be">529</text>
       <text x="14" y="71" class="mono" font-size="9" fill="#f7a854">78 ACTIVE DAYS</text>
 
-      <!-- Card 2 -->
       <g transform="translate(147, 0)">
         <polygon points="0,8 8,0 134,0 134,74 126,82 0,82" fill="#121824" fill-opacity="0.9" stroke="#ed8326" stroke-opacity="0.55" stroke-width="1.1"/>
-        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.2">SHIPPED SCALE</text>
+        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.0">USERS ONBOARDED</text>
         <text x="14" y="54" class="sans" font-size="27" font-weight="800" fill="#ffe4be">8,183</text>
-        <text x="14" y="71" class="mono" font-size="9" fill="#f7a854">USERS ONBOARDED</text>
+        <text x="14" y="71" class="mono" font-size="9" fill="#f7a854">USA ATTENDANCE</text>
       </g>
 
-      <!-- Card 3 -->
       <g transform="translate(294, 0)">
         <polygon points="0,8 8,0 134,0 134,74 126,82 0,82" fill="#121824" fill-opacity="0.9" stroke="#ed8326" stroke-opacity="0.55" stroke-width="1.1"/>
-        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.2">PEAK VELOCITY</text>
+        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.1">PEAK STREAK</text>
         <text x="14" y="54" class="sans" font-size="27" font-weight="800" fill="#ffe4be">14D</text>
         <text x="14" y="71" class="mono" font-size="9" fill="#f7a854">MAX 32 / DAY</text>
       </g>
 
-      <!-- Card 4 -->
       <g transform="translate(441, 0)">
         <polygon points="0,8 8,0 134,0 134,74 126,82 0,82" fill="#121824" fill-opacity="0.9" stroke="#ed8326" stroke-opacity="0.55" stroke-width="1.1"/>
-        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.2">HONORS &amp; CERTS</text>
+        <text x="14" y="22" class="mono" font-size="9.2" fill="#d99b66" letter-spacing="1.1">AWARDS &amp; CERTS</text>
         <text x="14" y="54" class="sans" font-size="27" font-weight="800" fill="#ffe4be">4 · 6</text>
         <text x="14" y="71" class="mono" font-size="9" fill="#f7a854">AWARDS · CERTS</text>
       </g>
     </g>
 
-    <!-- Core Stack Strip -->
     <g transform="translate(432, 350)">
       <rect x="0" y="0" width="575" height="27" rx="5" fill="#ed8326" fill-opacity="0.09" stroke="#ed8326" stroke-opacity="0.35" stroke-width="1"/>
       <text x="12" y="17.5" class="mono" font-size="9.0" fill="#ffd39e" letter-spacing="0.4">CORE STACK: <tspan fill="#fff0d9">TypeScript · Python · JS · Java · React/Next · Vue/Nuxt · Node · Firebase · PyTorch</tspan></text>
     </g>
 
-    <!-- Bottom Telemetry Waveform & Status -->
     <g>
-      <text x="434" y="396" class="mono" font-size="8.8" fill="#d99b66" letter-spacing="1.1">SIGNAL SPECTRUM // LIVE</text>
-    <rect x="434.0" y="426" width="4.6" height="10" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:0.00s"/>
-    <rect x="442.2" y="418" width="4.6" height="18" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:0.11s"/>
-    <rect x="450.4" y="422" width="4.6" height="14" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:0.22s"/>
-    <rect x="458.6" y="412" width="4.6" height="24" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:0.33s"/>
-    <rect x="466.8" y="408" width="4.6" height="28" rx="1.5" fill="#ffe0b5" opacity="0.85" class="bar-pulse" style="animation-delay:0.44s"/>
-    <rect x="475.0" y="420" width="4.6" height="16" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:0.55s"/>
-    <rect x="483.2" y="414" width="4.6" height="22" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:0.66s"/>
-    <rect x="491.4" y="406" width="4.6" height="30" rx="1.5" fill="#ffe0b5" opacity="0.85" class="bar-pulse" style="animation-delay:0.77s"/>
-    <rect x="499.6" y="417" width="4.6" height="19" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:0.88s"/>
-    <rect x="507.8" y="423" width="4.6" height="13" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:0.99s"/>
-    <rect x="516.0" y="410" width="4.6" height="26" rx="1.5" fill="#ffe0b5" opacity="0.85" class="bar-pulse" style="animation-delay:1.10s"/>
-    <rect x="524.2" y="415" width="4.6" height="21" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:1.21s"/>
-    <rect x="532.4" y="421" width="4.6" height="15" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:1.32s"/>
-    <rect x="540.6" y="407" width="4.6" height="29" rx="1.5" fill="#ffe0b5" opacity="0.85" class="bar-pulse" style="animation-delay:1.43s"/>
-    <rect x="548.8" y="412" width="4.6" height="24" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:1.54s"/>
-    <rect x="557.0" y="419" width="4.6" height="17" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:1.65s"/>
-    <rect x="565.2" y="424" width="4.6" height="12" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:1.76s"/>
-    <rect x="573.4" y="411" width="4.6" height="25" rx="1.5" fill="#ffe0b5" opacity="0.85" class="bar-pulse" style="animation-delay:1.87s"/>
-    <rect x="581.6" y="416" width="4.6" height="20" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:1.98s"/>
-    <rect x="589.8" y="422" width="4.6" height="14" rx="1.5" fill="#ed8326" opacity="0.85" class="bar-pulse" style="animation-delay:2.09s"/>
-    <rect x="598.0" y="418" width="4.6" height="18" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:2.20s"/>
-    <rect x="606.2" y="414" width="4.6" height="22" rx="1.5" fill="#f7aa57" opacity="0.85" class="bar-pulse" style="animation-delay:2.31s"/>
+      <text x="434" y="396" class="mono" font-size="8.8" fill="#d99b66" letter-spacing="1.1">WEEKLY ACTIVITY (LAST 22 WEEKS)</text>
+    <rect x="434.0" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.00s"/>
+    <rect x="442.2" y="427" width="4.6" height="9" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.11s"/>
+    <rect x="450.4" y="428" width="4.6" height="8" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.22s"/>
+    <rect x="458.6" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.33s"/>
+    <rect x="466.8" y="404" width="4.6" height="32" rx="1.5" fill="#ffe0b5" opacity="0.88" class="bar-pulse" style="animation-delay:0.44s"/>
+    <rect x="475.0" y="427" width="4.6" height="9" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.55s"/>
+    <rect x="483.2" y="421" width="4.6" height="15" rx="1.5" fill="#f7aa57" opacity="0.88" class="bar-pulse" style="animation-delay:0.66s"/>
+    <rect x="491.4" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.77s"/>
+    <rect x="499.6" y="429" width="4.6" height="7" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.88s"/>
+    <rect x="507.8" y="428" width="4.6" height="8" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:0.99s"/>
+    <rect x="516.0" y="429" width="4.6" height="7" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.10s"/>
+    <rect x="524.2" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.21s"/>
+    <rect x="532.4" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.32s"/>
+    <rect x="540.6" y="427" width="4.6" height="9" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.43s"/>
+    <rect x="548.8" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.54s"/>
+    <rect x="557.0" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.65s"/>
+    <rect x="565.2" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.76s"/>
+    <rect x="573.4" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.87s"/>
+    <rect x="581.6" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:1.98s"/>
+    <rect x="589.8" y="431" width="4.6" height="5" rx="1.5" fill="#ed8326" opacity="0.88" class="bar-pulse" style="animation-delay:2.09s"/>
+    <rect x="598.0" y="420" width="4.6" height="16" rx="1.5" fill="#f7aa57" opacity="0.88" class="bar-pulse" style="animation-delay:2.20s"/>
+    <rect x="606.2" y="419" width="4.6" height="17" rx="1.5" fill="#f7aa57" opacity="0.88" class="bar-pulse" style="animation-delay:2.31s"/>
 
       <g transform="translate(636, 392)" class="mono" font-size="9.4" fill="#e6b07a">
-        <text x="0" y="10"><tspan fill="#ffd39e" font-weight="700">HONORS:</tspan>   3rd Place Next Gen Regional Hackathon '26</text>
-        <text x="0" y="26"><tspan fill="#ffd39e" font-weight="700">AI/CLOUD:</tspan> IBM AI · AWS Cloud · Cisco Python/DS</text>
-        <text x="0" y="42"><tspan fill="#ffd39e" font-weight="700">STATUS:</tspan>   <tspan fill="#ffe4be">OPEN TO COLLABORATION &amp; IMPACTFUL BUILDS</tspan></text>
+        <text x="0" y="10"><tspan fill="#ffd39e" font-weight="700">AWARDS:</tspan>   3rd Place Next Gen Regional Hackathon '26</text>
+        <text x="0" y="26"><tspan fill="#ffd39e" font-weight="700">CERTS:</tspan>    IBM AI · AWS Cloud · Cisco Python/DS</text>
+        <text x="0" y="42"><tspan fill="#ffd39e" font-weight="700">STATUS:</tspan>   <tspan fill="#ffe4be">OPEN TO COLLABORATION &amp; SOFTWARE ROLES</tspan></text>
       </g>
     </g>
   </g>

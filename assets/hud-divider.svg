@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="24" viewBox="0 0 1040 24" role="img" aria-label="HUD Divider">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="24" viewBox="0 0 1040 24" role="img" aria-label="Divider">
   <defs>
     <linearGradient id="divGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ed8326" stop-opacity="0"/>
@@ -9,10 +9,7 @@
     </linearGradient>
     <style>
       .pulse { animation: travel 4.5s ease-in-out infinite; }
-      @keyframes travel {
-        0%, 100% { opacity: 0.45; }
-        50% { opacity: 1; }
-      }
+      @keyframes travel { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
     </style>
   </defs>
   <line x1="16" y1="12" x2="1024" y2="12" stroke="url(#divGrad)" stroke-width="1.4"/>

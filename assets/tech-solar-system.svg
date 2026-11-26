@@ -1,20 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="650" viewBox="0 0 1040 650" role="img" aria-label="Technology Solar System and Orbiting Repository Moons for Tin-axle">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="660" viewBox="0 0 1040 660" role="img" aria-label="Animated Languages and Repositories Solar System for Tin-axle">
   <defs>
     <linearGradient id="spaceBg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#06090f"/>
       <stop offset="50%" stop-color="#0b1019"/>
       <stop offset="100%" stop-color="#111622"/>
     </linearGradient>
-    <radialGradient id="sunHalo" cx="50%" cy="51.5%" r="32%">
-      <stop offset="0%" stop-color="#ffd59e" stop-opacity="0.30"/>
-      <stop offset="35%" stop-color="#ed8326" stop-opacity="0.12"/>
+    <radialGradient id="sunHalo" cx="50%" cy="51.2%" r="34%">
+      <stop offset="0%" stop-color="#ffd59e" stop-opacity="0.34"/>
+      <stop offset="32%" stop-color="#ed8326" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#06090f" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="sunCore" cx="38%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#fff8ec"/>
-      <stop offset="35%" stop-color="#ffd59e"/>
-      <stop offset="72%" stop-color="#f79f44"/>
-      <stop offset="100%" stop-color="#ed8326"/>
+    <radialGradient id="avatarRim" cx="50%" cy="50%" r="50%">
+      <stop offset="66%" stop-color="#ed8326" stop-opacity="0"/>
+      <stop offset="88%" stop-color="#f7a854" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#ffe2ba" stop-opacity="0.72"/>
     </radialGradient>
     <radialGradient id="planetTS" cx="35%" cy="30%" r="70%">
       <stop offset="0%" stop-color="#fff0d6"/>
@@ -53,8 +52,17 @@
       <stop offset="55%" stop-color="#ffd39e"/>
       <stop offset="100%" stop-color="#ed8326"/>
     </radialGradient>
+    <clipPath id="coreAvatarClip">
+      <circle cx="520" cy="338" r="36"/>
+    </clipPath>
+    <clipPath id="clip-ts">
+      <circle cx="0" cy="0" r="31.9"/>
+    </clipPath>
+    <clipPath id="clip-py">
+      <circle cx="0" cy="0" r="26.8"/>
+    </clipPath>
     <filter id="sunBlur" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="5.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -62,260 +70,311 @@
     </filter>
     <style>
       .mono { font-family: 'Consolas', 'SFMono-Regular', 'Cascadia Code', monospace; }
-      .spin-sun { transform-origin: 520px 335px; animation: spinCW 28s linear infinite; }
-      .spin-sun-rev { transform-origin: 520px 335px; animation: spinCCW 18s linear infinite; }
-      .sun-pulse { animation: pulseSun 3.4s ease-in-out infinite; }
+      .label-halo { paint-order: stroke; stroke: #070b12; stroke-width: 3.4px; stroke-linejoin: round; }
+      .spin-sun { transform-origin: 520px 338px; animation: spinCW 24s linear infinite; }
+      .spin-sun-rev { transform-origin: 520px 338px; animation: spinCCW 16s linear infinite; }
+      .sun-pulse { animation: pulseSun 3.2s ease-in-out infinite; }
+      .star-twinkle { animation: twinkle 3.6s ease-in-out infinite; }
       @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
-      @keyframes pulseSun { 0%, 100% { opacity: 0.92; } 50% { opacity: 0.60; } }
+      @keyframes pulseSun { 0%, 100% { opacity: 0.94; } 50% { opacity: 0.55; } }
+      @keyframes twinkle { 0%, 100% { opacity: 0.85; } 50% { opacity: 0.2; } }
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1039" height="649" rx="14" fill="url(#spaceBg)" stroke="#ed8326" stroke-opacity="0.45" stroke-width="1.2"/>
-  <rect x="0.5" y="0.5" width="1039" height="649" rx="14" fill="url(#sunHalo)"/>
+  <rect x="0.5" y="0.5" width="1039" height="659" rx="14" fill="url(#spaceBg)" stroke="#ed8326" stroke-opacity="0.45" stroke-width="1.2"/>
+  <rect x="0.5" y="0.5" width="1039" height="659" rx="14" fill="url(#sunHalo)"/>
 
-  <!-- HUD Corner Brackets -->
   <g fill="none" stroke="#f7a854" stroke-width="1.8" stroke-linecap="round">
     <path d="M 16 36 L 16 16 L 40 16"/>
     <path d="M 1000 16 L 1024 16 L 1024 36"/>
-    <path d="M 16 614 L 16 634 L 40 634"/>
-    <path d="M 1000 634 L 1024 634 L 1024 614"/>
+    <path d="M 16 624 L 16 644 L 40 644"/>
+    <path d="M 1000 644 L 1024 644 L 1024 624"/>
   </g>
 
-  <!-- Starfield -->
-  <circle cx="44" cy="126" r="1.5" fill="#ffd39e" opacity="0.18"/>
-  <circle cx="217" cy="253" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="390" cy="380" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="563" cy="507" r="1" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="736" cy="94" r="0.65" fill="#ffd39e" opacity="0.70"/>
-  <circle cx="909" cy="221" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="72" cy="348" r="1" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="245" cy="475" r="1.5" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="418" cy="602" r="0.65" fill="#ffd39e" opacity="0.57"/>
-  <circle cx="591" cy="189" r="1" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="764" cy="316" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="937" cy="443" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="100" cy="570" r="1" fill="#ffd39e" opacity="0.44"/>
-  <circle cx="273" cy="157" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="446" cy="284" r="1.5" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="619" cy="411" r="1" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="792" cy="538" r="0.65" fill="#ffd39e" opacity="0.31"/>
-  <circle cx="965" cy="125" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="128" cy="252" r="1" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="301" cy="379" r="0.65" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="474" cy="506" r="0.65" fill="#ffd39e" opacity="0.18"/>
-  <circle cx="647" cy="93" r="1.5" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="820" cy="220" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="993" cy="347" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="156" cy="474" r="1" fill="#ffd39e" opacity="0.70"/>
-  <circle cx="329" cy="601" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="502" cy="188" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="675" cy="315" r="1" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="848" cy="442" r="1.5" fill="#ffd39e" opacity="0.57"/>
-  <circle cx="1021" cy="569" r="0.65" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="184" cy="156" r="1" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="357" cy="283" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="530" cy="410" r="0.65" fill="#ffd39e" opacity="0.44"/>
-  <circle cx="703" cy="537" r="1" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="876" cy="124" r="0.65" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="39" cy="251" r="1.5" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="212" cy="378" r="1" fill="#ffd39e" opacity="0.31"/>
-  <circle cx="385" cy="505" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="558" cy="92" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="731" cy="219" r="1" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="904" cy="346" r="0.65" fill="#ffd39e" opacity="0.18"/>
-  <circle cx="67" cy="473" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="240" cy="600" r="1.5" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="413" cy="187" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="586" cy="314" r="0.65" fill="#ffd39e" opacity="0.70"/>
-  <circle cx="759" cy="441" r="1" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="932" cy="568" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="95" cy="155" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="268" cy="282" r="1" fill="#ffd39e" opacity="0.57"/>
-  <circle cx="441" cy="409" r="1.5" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="614" cy="536" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="787" cy="123" r="1" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="960" cy="250" r="0.65" fill="#ffd39e" opacity="0.44"/>
-  <circle cx="123" cy="377" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="296" cy="504" r="1" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="469" cy="91" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="642" cy="218" r="1.5" fill="#ffd39e" opacity="0.31"/>
-  <circle cx="815" cy="345" r="1" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="988" cy="472" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="151" cy="599" r="0.65" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="324" cy="186" r="1" fill="#ffd39e" opacity="0.18"/>
-  <circle cx="497" cy="313" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="670" cy="440" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="843" cy="567" r="1.5" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="1016" cy="154" r="0.65" fill="#ffd39e" opacity="0.70"/>
-  <circle cx="179" cy="281" r="0.65" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="352" cy="408" r="1" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="525" cy="535" r="0.65" fill="#fff2dc" opacity="0.44"/>
-  <circle cx="698" cy="122" r="0.65" fill="#ffd39e" opacity="0.57"/>
-  <circle cx="871" cy="249" r="1" fill="#fff2dc" opacity="0.70"/>
-  <circle cx="34" cy="376" r="1.5" fill="#fff2dc" opacity="0.18"/>
-  <circle cx="207" cy="503" r="0.65" fill="#fff2dc" opacity="0.31"/>
-  <circle cx="380" cy="90" r="1" fill="#ffd39e" opacity="0.44"/>
-  <circle cx="553" cy="217" r="0.65" fill="#fff2dc" opacity="0.57"/>
-  <circle cx="726" cy="344" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="44" cy="129" r="1.5" fill="#ffd39e" opacity="0.18" class="star-twinkle" style="animation-delay:0.00s"/>
+  <circle cx="217" cy="256" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="390" cy="383" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="563" cy="510" r="1" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="736" cy="97" r="0.65" fill="#ffd39e" opacity="0.70"/>
+  <circle cx="909" cy="224" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="72" cy="351" r="1" fill="#fff2dc" opacity="0.31" class="star-twinkle" style="animation-delay:1.62s"/>
+  <circle cx="245" cy="478" r="1.5" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="418" cy="605" r="0.65" fill="#ffd39e" opacity="0.57"/>
+  <circle cx="591" cy="192" r="1" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="764" cy="319" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="937" cy="446" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="100" cy="573" r="1" fill="#ffd39e" opacity="0.44" class="star-twinkle" style="animation-delay:3.24s"/>
+  <circle cx="273" cy="160" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="446" cy="287" r="1.5" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="619" cy="414" r="1" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="792" cy="541" r="0.65" fill="#ffd39e" opacity="0.31"/>
+  <circle cx="965" cy="128" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="128" cy="255" r="1" fill="#fff2dc" opacity="0.57" class="star-twinkle" style="animation-delay:0.86s"/>
+  <circle cx="301" cy="382" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="474" cy="509" r="0.65" fill="#ffd39e" opacity="0.18"/>
+  <circle cx="647" cy="96" r="1.5" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="820" cy="223" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="993" cy="350" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="156" cy="477" r="1" fill="#ffd39e" opacity="0.70" class="star-twinkle" style="animation-delay:2.48s"/>
+  <circle cx="329" cy="604" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="502" cy="191" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="675" cy="318" r="1" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="848" cy="445" r="1.5" fill="#ffd39e" opacity="0.57"/>
+  <circle cx="1021" cy="572" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="184" cy="159" r="1" fill="#fff2dc" opacity="0.18" class="star-twinkle" style="animation-delay:0.10s"/>
+  <circle cx="357" cy="286" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="530" cy="413" r="0.65" fill="#ffd39e" opacity="0.44"/>
+  <circle cx="703" cy="540" r="1" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="876" cy="127" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="39" cy="254" r="1.5" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="212" cy="381" r="1" fill="#ffd39e" opacity="0.31" class="star-twinkle" style="animation-delay:1.72s"/>
+  <circle cx="385" cy="508" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="558" cy="95" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="731" cy="222" r="1" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="904" cy="349" r="0.65" fill="#ffd39e" opacity="0.18"/>
+  <circle cx="67" cy="476" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="240" cy="603" r="1.5" fill="#fff2dc" opacity="0.44" class="star-twinkle" style="animation-delay:3.34s"/>
+  <circle cx="413" cy="190" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="586" cy="317" r="0.65" fill="#ffd39e" opacity="0.70"/>
+  <circle cx="759" cy="444" r="1" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="932" cy="571" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="95" cy="158" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="268" cy="285" r="1" fill="#ffd39e" opacity="0.57" class="star-twinkle" style="animation-delay:0.96s"/>
+  <circle cx="441" cy="412" r="1.5" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="614" cy="539" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="787" cy="126" r="1" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="960" cy="253" r="0.65" fill="#ffd39e" opacity="0.44"/>
+  <circle cx="123" cy="380" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="296" cy="507" r="1" fill="#fff2dc" opacity="0.70" class="star-twinkle" style="animation-delay:2.58s"/>
+  <circle cx="469" cy="94" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="642" cy="221" r="1.5" fill="#ffd39e" opacity="0.31"/>
+  <circle cx="815" cy="348" r="1" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="988" cy="475" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="151" cy="602" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="324" cy="189" r="1" fill="#ffd39e" opacity="0.18" class="star-twinkle" style="animation-delay:0.20s"/>
+  <circle cx="497" cy="316" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="670" cy="443" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="843" cy="570" r="1.5" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="1016" cy="157" r="0.65" fill="#ffd39e" opacity="0.70"/>
+  <circle cx="179" cy="284" r="0.65" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="352" cy="411" r="1" fill="#fff2dc" opacity="0.31" class="star-twinkle" style="animation-delay:1.82s"/>
+  <circle cx="525" cy="538" r="0.65" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="698" cy="125" r="0.65" fill="#ffd39e" opacity="0.57"/>
+  <circle cx="871" cy="252" r="1" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="34" cy="379" r="1.5" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="207" cy="506" r="0.65" fill="#fff2dc" opacity="0.31"/>
+  <circle cx="380" cy="93" r="1" fill="#ffd39e" opacity="0.44" class="star-twinkle" style="animation-delay:3.44s"/>
+  <circle cx="553" cy="220" r="0.65" fill="#fff2dc" opacity="0.57"/>
+  <circle cx="726" cy="347" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="899" cy="474" r="1" fill="#fff2dc" opacity="0.18"/>
+  <circle cx="62" cy="601" r="0.65" fill="#ffd39e" opacity="0.31"/>
+  <circle cx="235" cy="188" r="1.5" fill="#fff2dc" opacity="0.44"/>
+  <circle cx="408" cy="315" r="1" fill="#fff2dc" opacity="0.57" class="star-twinkle" style="animation-delay:1.06s"/>
+  <circle cx="581" cy="442" r="0.65" fill="#fff2dc" opacity="0.70"/>
+  <circle cx="754" cy="569" r="0.65" fill="#ffd39e" opacity="0.18"/>
+  <circle cx="927" cy="156" r="1" fill="#fff2dc" opacity="0.31"/>
 
 
-  <!-- Subtle Radial HUD Crosshair -->
   <g stroke="#ed8326" stroke-opacity="0.09" stroke-width="1">
-    <line x1="24" y1="335" x2="1016" y2="335"/>
-    <line x1="520" y1="74" x2="520" y2="594"/>
+    <line x1="24" y1="338" x2="1016" y2="338"/>
+    <line x1="520" y1="74" x2="520" y2="602"/>
   </g>
 
-  <!-- Top Header -->
   <g>
-    <text x="34" y="39" class="mono" font-size="11.5" fill="#ffd39e" letter-spacing="1.6" font-weight="700">TECHNOLOGY SOLAR SYSTEM &amp; REPOSITORY MOONS // @TIN-AXLE</text>
-    <text x="34" y="57" class="mono" font-size="10" fill="#d99b66">PLANET RADIUS = GITHUB LANGUAGE SHARE (948.9 KB ACROSS 5 PUBLIC REPOS) · MOONS = ORBITING REPOSITORIES</text>
-    <rect x="852" y="24" width="156" height="24" rx="4" fill="#ed8326" fill-opacity="0.14" stroke="#f7a854" stroke-opacity="0.55"/>
-    <text x="930" y="40" text-anchor="middle" class="mono" font-size="9.5" fill="#ffe4be" font-weight="700">6 ORBITS · 11 BODIES</text>
+    <text x="34" y="39" class="mono" font-size="11.5" fill="#ffd39e" letter-spacing="1.6" font-weight="700">LANGUAGES &amp; REPOSITORIES — @TIN-AXLE</text>
+    <text x="34" y="57" class="mono" font-size="10" fill="#d99b66">PLANET SIZE = GITHUB LANGUAGE SHARE (927.9 KB) · MOONS = REPOSITORIES</text>
+    <rect x="850" y="24" width="158" height="24" rx="4" fill="#ed8326" fill-opacity="0.14" stroke="#f7a854" stroke-opacity="0.55"/>
+    <text x="929" y="40" text-anchor="middle" class="mono" font-size="9.5" fill="#ffe4be" font-weight="700">6 LANGUAGES · LIVE</text>
   </g>
   <line x1="24" y1="68" x2="1016" y2="68" stroke="#ed8326" stroke-opacity="0.25" stroke-width="1"/>
 
-  <!-- Elliptical Orbital Paths -->
   <g>
-    <ellipse cx="520" cy="335" rx="120" ry="52" fill="none" stroke="#f7a854" stroke-opacity="0.34" stroke-width="1.1" stroke-dasharray="4 4"/>
-    <ellipse cx="520" cy="335" rx="190" ry="82" fill="none" stroke="#f7a854" stroke-opacity="0.36" stroke-width="1.1"/>
-    <ellipse cx="520" cy="335" rx="270" ry="118" fill="none" stroke="#f7a854" stroke-opacity="0.42" stroke-width="1.1"/>
-    <ellipse cx="520" cy="335" rx="350" ry="154" fill="none" stroke="#f7a854" stroke-opacity="0.36" stroke-width="1.1" stroke-dasharray="8 4"/>
-    <ellipse cx="520" cy="335" rx="432" ry="192" fill="none" stroke="#f7a854" stroke-opacity="0.3" stroke-width="1.1"/>
-    <ellipse cx="520" cy="335" rx="486" ry="222" fill="none" stroke="#f7a854" stroke-opacity="0.22" stroke-width="1.1" stroke-dasharray="3 6"/>
+    <ellipse cx="520" cy="338" rx="142" ry="70" fill="none" stroke="#f7a854" stroke-opacity="0.36" stroke-width="1.1" stroke-dasharray="4 4"/>
+    <ellipse cx="520" cy="338" rx="204" ry="96" fill="none" stroke="#f7a854" stroke-opacity="0.33" stroke-width="1.1"/>
+    <ellipse cx="520" cy="338" rx="278" ry="128" fill="none" stroke="#f7a854" stroke-opacity="0.31" stroke-width="1.1"/>
+    <ellipse cx="520" cy="338" rx="356" ry="162" fill="none" stroke="#f7a854" stroke-opacity="0.28" stroke-width="1.1" stroke-dasharray="8 4"/>
+    <ellipse cx="520" cy="338" rx="422" ry="194" fill="none" stroke="#f7a854" stroke-opacity="0.26" stroke-width="1.1"/>
+    <ellipse cx="520" cy="338" rx="476" ry="220" fill="none" stroke="#f7a854" stroke-opacity="0.23" stroke-width="1.1" stroke-dasharray="3 6"/>
   </g>
 
-  <!-- Central Star: @Tin-axle Solar Core -->
+  <!-- Central Profile Picture -->
   <g>
-    <circle cx="520" cy="335" r="54" fill="none" stroke="#f7a854" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="10 6" class="spin-sun"/>
-    <circle cx="520" cy="335" r="45" fill="none" stroke="#ffd39e" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="22 14" class="spin-sun-rev"/>
-    <circle cx="520" cy="335" r="39" fill="#ed8326" fill-opacity="0.24" class="sun-pulse" filter="url(#sunBlur)"/>
-    <circle cx="520" cy="335" r="31" fill="url(#sunCore)" stroke="#fff7eb" stroke-width="1.2" filter="url(#sunBlur)"/>
-    <text x="520" y="333" text-anchor="middle" class="mono" font-size="9.5" font-weight="800" fill="#1a120a">@TIN-AXLE</text>
-    <text x="520" y="345" text-anchor="middle" class="mono" font-size="7.6" font-weight="700" fill="#3a230e">SOLAR CORE</text>
+    <circle cx="520" cy="338" r="58" fill="none" stroke="#f7a854" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="10 6" class="spin-sun"/>
+    <circle cx="520" cy="338" r="49" fill="none" stroke="#ffd39e" stroke-opacity="0.65" stroke-width="1.6" stroke-dasharray="22 14" class="spin-sun-rev"/>
+    <circle cx="520" cy="338" r="43" fill="#ed8326" fill-opacity="0.26" class="sun-pulse" filter="url(#sunBlur)"/>
+    <circle cx="520" cy="338" r="38" fill="#101622" stroke="#ffe4be" stroke-width="1.8" filter="url(#sunBlur)"/>
+    <image href="data:image/jpeg;base64,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" x="484" y="302" width="72" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#coreAvatarClip)"/>
+    <circle cx="520" cy="338" r="36" fill="url(#avatarRim)"/>
+    <circle cx="520" cy="338" r="36.5" fill="none" stroke="#ffd39e" stroke-opacity="0.9" stroke-width="1.5"/>
+    <rect x="479" y="378" width="82" height="16" rx="8" fill="#0d131f" fill-opacity="0.92" stroke="#f7a854" stroke-opacity="0.7" stroke-width="0.9"/>
+    <text x="520" y="389" text-anchor="middle" class="mono" font-size="8.6" font-weight="700" fill="#ffe6c4">@TIN-AXLE</text>
   </g>
 
-  <!-- Planets & Orbiting Repository Moons -->
-  <g>
-    <ellipse cx="256" cy="312" rx="88" ry="55" fill="none" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <ellipse cx="256" cy="312" rx="60" ry="16" transform="rotate(-14 256 312)" fill="none" stroke="#ffd39e" stroke-opacity="0.55" stroke-width="2.4"/>
-    <ellipse cx="256" cy="312" rx="66" ry="18" transform="rotate(-14 256 312)" fill="none" stroke="#ed8326" stroke-opacity="0.32" stroke-width="1"/>
-    <circle cx="256" cy="312" r="43" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="256" cy="312" r="36" fill="url(#planetTS)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <path d="M 224 304 Q 256 310 288 304" fill="none" stroke="#fff2dc" stroke-opacity="0.28" stroke-width="2"/>
-    <path d="M 226 321 Q 256 327 286 321" fill="none" stroke="#a65d1e" stroke-opacity="0.32" stroke-width="2.2"/>
-    <text x="256" y="244" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">TYPESCRIPT</text>
-    <text x="256" y="257" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">56.9% · 540 KB</text>
-    <line x1="256" y1="312" x2="162" y2="272" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="162" cy="272" r="11" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="162" cy="272" r="7.5" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="150" y="275" text-anchor="end" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">Ball-Bearing</text>
-    <text x="150" y="286.5" text-anchor="end" class="mono" font-size="8.2" fill="#d99b66">TS 99.5% · Arena</text>
-    <line x1="256" y1="312" x2="186" y2="374" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="186" cy="374" r="10" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="186" cy="374" r="6.5" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="174" y="377" text-anchor="end" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">Prototype</text>
-    <text x="174" y="388.5" text-anchor="end" class="mono" font-size="8.2" fill="#d99b66">TS 97.3% · OCR</text>
-    <line x1="256" y1="312" x2="294" y2="392" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="294" cy="392" r="9.5" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="294" cy="392" r="6" fill="#1a2130" stroke="#ffd39e" stroke-width="1.4"/>
-    <circle cx="294" cy="392" r="2.7" fill="#ffd39e"/>
-    <text x="294" y="413" text-anchor="middle" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">USA Attendance*</text>
-    <text x="294" y="424.5" text-anchor="middle" class="mono" font-size="8.2" fill="#d99b66">Nuxt 4 · 8.1k Users</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="18s" begin="-12s" repeatCount="indefinite" path="M 142,0 A 142,70 0 1,1 -142,0 A 142,70 0 1,1 142,0 Z" />
+      <ellipse cx="0" cy="0" rx="38" ry="24" fill="none" stroke="#ffd39e" stroke-opacity="0.28" stroke-width="0.9" stroke-dasharray="3 4"/>
+      <circle cx="0" cy="0" r="18.8" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="12.8" fill="url(#planetPS)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <text x="0" y="-24.8" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="700" fill="#fff0d9" letter-spacing="0.6">POWERSHELL</text>
+      <text x="0" y="-14.3" text-anchor="middle" class="mono label-halo" font-size="8.0" fill="#f7a854">2.6%</text>
+      <g>
+        <animateMotion dur="6.5s" begin="-0.4s" repeatCount="indefinite" path="M 38,0 A 38,24 0 1,1 -38,0 A 38,24 0 1,1 38,0 Z" />
+        <circle cx="0" cy="0" r="6.8" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="3.8" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="8.8" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">KoiPond.ps1</text>
+      </g>
+    </g>
   </g>
-  <g>
-    <ellipse cx="786" cy="304" rx="88" ry="55" fill="none" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <circle cx="786" cy="304" r="38" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="786" cy="304" r="31" fill="url(#planetPY)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <path d="M 759 296 Q 786 302 813 296" fill="none" stroke="#fff2dc" stroke-opacity="0.28" stroke-width="2"/>
-    <path d="M 761 313 Q 786 319 811 313" fill="none" stroke="#a65d1e" stroke-opacity="0.32" stroke-width="2.2"/>
-    <text x="786" y="242" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">PYTHON</text>
-    <text x="786" y="255" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">38.8% · 368 KB</text>
-    <line x1="786" y1="304" x2="866" y2="254" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="866" cy="254" r="10.7" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="866" cy="254" r="7.2" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="878" y="257" text-anchor="start" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">KoiPond</text>
-    <text x="878" y="268.5" text-anchor="start" class="mono" font-size="8.2" fill="#d99b66">Py 81.8% · GPU .scr</text>
-    <line x1="786" y1="304" x2="882" y2="316" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="882" cy="316" r="10.3" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="882" cy="316" r="6.8" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="894" y="319" text-anchor="start" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">arithmatron</text>
-    <text x="894" y="330.5" text-anchor="start" class="mono" font-size="8.2" fill="#d99b66">Py 100% · GameOn</text>
-    <line x1="786" y1="304" x2="856" y2="372" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="856" cy="372" r="9.3" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="856" cy="372" r="5.8" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="868" y="375" text-anchor="start" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">ScreenSaver</text>
-    <text x="868" y="386.5" text-anchor="start" class="mono" font-size="8.2" fill="#d99b66">Py 100%</text>
-    <line x1="786" y1="304" x2="750" y2="382" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="750" cy="382" r="9.7" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="750" cy="382" r="6.2" fill="#1a2130" stroke="#ffd39e" stroke-width="1.4"/>
-    <circle cx="750" cy="382" r="2.8" fill="#ffd39e"/>
-    <text x="750" y="403" text-anchor="middle" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">Medicalexa*</text>
-    <text x="750" y="414.5" text-anchor="middle" class="mono" font-size="8.2" fill="#d99b66">PyTorch · PrimeKG</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="24s" begin="-2.6s" repeatCount="indefinite" path="M 204,0 A 204,96 0 1,1 -204,0 A 204,96 0 1,1 204,0 Z" />
+      <circle cx="0" cy="0" r="17.5" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="11.5" fill="url(#planetGLSL)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <text x="0" y="-23.5" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="700" fill="#fff0d9" letter-spacing="0.6">GLSL</text>
+      <text x="0" y="-13.0" text-anchor="middle" class="mono label-halo" font-size="8.0" fill="#f7a854">1.5%</text>
+    </g>
   </g>
-  <g>
-    <ellipse cx="444" cy="268" rx="38" ry="24" fill="none" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <circle cx="444" cy="268" r="21" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="444" cy="268" r="14" fill="url(#planetPS)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <text x="444" y="238" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">POWERSHELL</text>
-    <text x="444" y="251" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">2.6% · 24.3 KB</text>
-    <line x1="444" y1="268" x2="396" y2="294" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="396" cy="294" r="7.7" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="396" cy="294" r="4.2" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="396" y="312" text-anchor="middle" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">KoiPond Scripts</text>
-    <text x="396" y="323.5" text-anchor="middle" class="mono" font-size="8.2" fill="#d99b66">.scr Packaging</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="34s" begin="-17s" repeatCount="indefinite" path="M 278,0 A 278,128 0 1,1 -278,0 A 278,128 0 1,1 278,0 Z" />
+      <ellipse cx="0" cy="0" rx="82" ry="52" fill="none" stroke="#ffd39e" stroke-opacity="0.28" stroke-width="0.9" stroke-dasharray="3 4"/>
+      <g transform="rotate(-14)">
+        <ellipse cx="0" cy="0" rx="53" ry="14" fill="none" stroke="#ffd39e" stroke-opacity="0.62" stroke-width="2.4"/>
+        <ellipse cx="0" cy="0" rx="58" ry="16" fill="none" stroke="#ed8326" stroke-opacity="0.34" stroke-width="1"/>
+      </g>
+      <circle cx="0" cy="0" r="37.9" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="31.9" fill="url(#planetTS)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <g clip-path="url(#clip-ts)">
+        <path d="M -39.9 -7 Q 0 -1 39.9 -7" fill="none" stroke="#fff2dc" stroke-opacity="0.32" stroke-width="2.2">
+          <animateTransform attributeName="transform" type="translate" values="-6 0; 6 0; -6 0" dur="5s" repeatCount="indefinite" />
+        </path>
+        <path d="M -39.9 9 Q 0 15 39.9 9" fill="none" stroke="#a65d1e" stroke-opacity="0.34" stroke-width="2.4">
+          <animateTransform attributeName="transform" type="translate" values="6 0; -6 0; 6 0" dur="6.5s" repeatCount="indefinite" />
+        </path>
+      </g>
+      <text x="0" y="-2" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="800" fill="#fff6e8" letter-spacing="0.7">TYPESCRIPT</text>
+      <text x="0" y="9.5" text-anchor="middle" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffd39e">56.8%</text>
+      <g>
+        <animateMotion dur="11s" begin="-0.4s" repeatCount="indefinite" path="M 82,0 A 82,52 0 1,1 -82,0 A 82,52 0 1,1 82,0 Z" />
+        <circle cx="0" cy="0" r="9.6" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="6.6" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="11.6" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">Ball-Bearing</text>
+      </g>
+      <g>
+        <animateMotion dur="11s" begin="-4.07s" repeatCount="indefinite" path="M 82,0 A 82,52 0 1,1 -82,0 A 82,52 0 1,1 82,0 Z" />
+        <circle cx="0" cy="0" r="9.2" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="6.2" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="11.2" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">Prototype</text>
+      </g>
+      <g>
+        <animateMotion dur="11s" begin="-7.73s" repeatCount="indefinite" path="M 82,0 A 82,52 0 1,1 -82,0 A 82,52 0 1,1 82,0 Z" />
+        <circle cx="0" cy="0" r="8.4" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="5.4" fill="#141b28" stroke="#ffd39e" stroke-width="1.3"/>
+        <circle cx="0" cy="0" r="2.4" fill="#ffd39e"/>
+        <text x="10.4" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">USA Attendance*</text>
+      </g>
+    </g>
   </g>
-  <g>
-    <circle cx="628" cy="368" r="19" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="628" cy="368" r="12" fill="url(#planetGLSL)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <text x="632" y="400" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">GLSL SHADERS</text>
-    <text x="632" y="413" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">1.5% · 14.5 KB</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="44s" begin="-0.5s" repeatCount="indefinite" path="M 356,0 A 356,162 0 1,1 -356,0 A 356,162 0 1,1 356,0 Z" />
+      <ellipse cx="0" cy="0" rx="78" ry="50" fill="none" stroke="#ffd39e" stroke-opacity="0.28" stroke-width="0.9" stroke-dasharray="3 4"/>
+      <circle cx="0" cy="0" r="32.8" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="26.8" fill="url(#planetPY)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <g clip-path="url(#clip-py)">
+        <path d="M -34.8 -7 Q 0 -1 34.8 -7" fill="none" stroke="#fff2dc" stroke-opacity="0.32" stroke-width="2.2">
+          <animateTransform attributeName="transform" type="translate" values="-6 0; 6 0; -6 0" dur="5s" repeatCount="indefinite" />
+        </path>
+        <path d="M -34.8 9 Q 0 15 34.8 9" fill="none" stroke="#a65d1e" stroke-opacity="0.34" stroke-width="2.4">
+          <animateTransform attributeName="transform" type="translate" values="6 0; -6 0; 6 0" dur="6.5s" repeatCount="indefinite" />
+        </path>
+      </g>
+      <text x="0" y="-2" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="800" fill="#fff6e8" letter-spacing="0.7">PYTHON</text>
+      <text x="0" y="9.5" text-anchor="middle" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffd39e">38.7%</text>
+      <g>
+        <animateMotion dur="12.5s" begin="-0.4s" repeatCount="indefinite" path="M 78,0 A 78,50 0 1,1 -78,0 A 78,50 0 1,1 78,0 Z" />
+        <circle cx="0" cy="0" r="9.4" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="6.4" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="11.4" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">KoiPond</text>
+      </g>
+      <g>
+        <animateMotion dur="12.5s" begin="-3.52s" repeatCount="indefinite" path="M 78,0 A 78,50 0 1,1 -78,0 A 78,50 0 1,1 78,0 Z" />
+        <circle cx="0" cy="0" r="9.0" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="6.0" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="11.0" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">ScreenSaver</text>
+      </g>
+      <g>
+        <animateMotion dur="12.5s" begin="-6.65s" repeatCount="indefinite" path="M 78,0 A 78,50 0 1,1 -78,0 A 78,50 0 1,1 78,0 Z" />
+        <circle cx="0" cy="0" r="8.6" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="5.6" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="10.6" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">arithmatron</text>
+      </g>
+      <g>
+        <animateMotion dur="12.5s" begin="-9.78s" repeatCount="indefinite" path="M 78,0 A 78,50 0 1,1 -78,0 A 78,50 0 1,1 78,0 Z" />
+        <circle cx="0" cy="0" r="8.4" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="5.4" fill="#141b28" stroke="#ffd39e" stroke-width="1.3"/>
+        <circle cx="0" cy="0" r="2.4" fill="#ffd39e"/>
+        <text x="10.4" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">Medicalexa*</text>
+      </g>
+    </g>
   </g>
-  <g>
-    <ellipse cx="520" cy="181" rx="96" ry="60" fill="none" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <ellipse cx="520" cy="181" rx="32" ry="8" transform="rotate(-14 520 181)" fill="none" stroke="#ffd39e" stroke-opacity="0.55" stroke-width="2.4"/>
-    <ellipse cx="520" cy="181" rx="38" ry="10" transform="rotate(-14 520 181)" fill="none" stroke="#ed8326" stroke-opacity="0.32" stroke-width="1"/>
-    <circle cx="520" cy="181" r="26" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="520" cy="181" r="19" fill="url(#planetJS)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <text x="520" y="138" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">JAVASCRIPT &amp; WEB</text>
-    <text x="520" y="151" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">0.4% + COLLAB</text>
-    <line x1="520" y1="181" x2="610" y2="186" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="610" cy="186" r="10.3" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="610" cy="186" r="6.8" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="1"/>
-    <text x="622" y="189" text-anchor="start" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">Quarto</text>
-    <text x="622" y="200.5" text-anchor="start" class="mono" font-size="8.2" fill="#d99b66">Cocoasaur/Quarto · Firebase</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="56s" begin="-42s" repeatCount="indefinite" path="M 422,0 A 422,194 0 1,1 -422,0 A 422,194 0 1,1 422,0 Z" />
+      <ellipse cx="0" cy="0" rx="62" ry="36" fill="none" stroke="#ffd39e" stroke-opacity="0.28" stroke-width="0.9" stroke-dasharray="3 4"/>
+      <g transform="rotate(-14)">
+        <ellipse cx="0" cy="0" rx="30" ry="8" fill="none" stroke="#ffd39e" stroke-opacity="0.62" stroke-width="2.4"/>
+        <ellipse cx="0" cy="0" rx="35" ry="10" fill="none" stroke="#ed8326" stroke-opacity="0.34" stroke-width="1"/>
+      </g>
+      <circle cx="0" cy="0" r="24.0" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="18.0" fill="url(#planetJS)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <text x="0" y="-30.0" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="700" fill="#fff0d9" letter-spacing="0.6">JAVASCRIPT &amp; WEB</text>
+      <text x="0" y="-19.5" text-anchor="middle" class="mono label-halo" font-size="8.0" fill="#f7a854">0.3% + COLLAB</text>
+      <g>
+        <animateMotion dur="9.5s" begin="-0.4s" repeatCount="indefinite" path="M 62,0 A 62,36 0 1,1 -62,0 A 62,36 0 1,1 62,0 Z" />
+        <circle cx="0" cy="0" r="9.0" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="6.0" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.95"/>
+        <text x="11.0" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">Quarto</text>
+      </g>
+    </g>
   </g>
-  <g>
-    <ellipse cx="520" cy="527" rx="96" ry="60" fill="none" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.9" stroke-dasharray="3 4"/>
-    <circle cx="520" cy="527" r="25" fill="#ed8326" fill-opacity="0.14"/>
-    <circle cx="520" cy="527" r="18" fill="url(#planetJAVA)" stroke="#ffe4be" stroke-opacity="0.65" stroke-width="1.1"/>
-    <text x="520" y="564" text-anchor="middle" class="mono" font-size="11.2" font-weight="700" fill="#fff0d9" letter-spacing="1">JAVA &amp; CLOUD CORE</text>
-    <text x="520" y="577" text-anchor="middle" class="mono" font-size="9.2" fill="#f7a854">RESUME VERIFIED</text>
-    <line x1="520" y1="527" x2="414" y2="516" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="414" cy="516" r="8.7" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="414" cy="516" r="5.2" fill="#1a2130" stroke="#ffd39e" stroke-width="1.4"/>
-    <circle cx="414" cy="516" r="2.3" fill="#ffd39e"/>
-    <text x="402" y="519" text-anchor="end" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">React / Next / Vue</text>
-    <text x="402" y="530.5" text-anchor="end" class="mono" font-size="8.2" fill="#d99b66">Frontend Orbit</text>
-    <line x1="520" y1="527" x2="626" y2="516" stroke="#ffd39e" stroke-opacity="0.22" stroke-width="0.8" stroke-dasharray="2 3"/>
-    <circle cx="626" cy="516" r="8.7" fill="#ffd39e" fill-opacity="0.16"/>
-    <circle cx="626" cy="516" r="5.2" fill="#1a2130" stroke="#ffd39e" stroke-width="1.4"/>
-    <circle cx="626" cy="516" r="2.3" fill="#ffd39e"/>
-    <text x="638" y="519" text-anchor="start" class="mono" font-size="9.6" font-weight="700" fill="#ffe6c4">Firebase / Supabase</text>
-    <text x="638" y="530.5" text-anchor="start" class="mono" font-size="8.2" fill="#d99b66">Cloud Orbit</text>
+  <g transform="translate(520, 338)">
+    <g>
+      <animateMotion dur="70s" begin="-17.5s" repeatCount="indefinite" path="M 476,0 A 476,220 0 1,1 -476,0 A 476,220 0 1,1 476,0 Z" />
+      <ellipse cx="0" cy="0" rx="72" ry="38" fill="none" stroke="#ffd39e" stroke-opacity="0.28" stroke-width="0.9" stroke-dasharray="3 4"/>
+      <circle cx="0" cy="0" r="22.5" fill="#ed8326" fill-opacity="0.16"/>
+      <circle cx="0" cy="0" r="16.5" fill="url(#planetJAVA)" stroke="#ffe4be" stroke-opacity="0.7" stroke-width="1.1"/>
+      <text x="0" y="-28.5" text-anchor="middle" class="mono label-halo" font-size="9.6" font-weight="700" fill="#fff0d9" letter-spacing="0.6">JAVA &amp; CLOUD</text>
+      <text x="0" y="-18.0" text-anchor="middle" class="mono label-halo" font-size="8.0" fill="#f7a854">RESUME CORE</text>
+      <g>
+        <animateMotion dur="13.5s" begin="-6.75s" repeatCount="indefinite" path="M 72,0 A 72,38 0 1,1 -72,0 A 72,38 0 1,1 72,0 Z" />
+        <circle cx="0" cy="0" r="7.8" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="4.8" fill="#141b28" stroke="#ffd39e" stroke-width="1.3"/>
+        <circle cx="0" cy="0" r="2.1" fill="#ffd39e"/>
+        <text x="9.8" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">React / Vue</text>
+      </g>
+      <g>
+        <animateMotion dur="13.5s" begin="-0s" repeatCount="indefinite" path="M 72,0 A 72,38 0 1,1 -72,0 A 72,38 0 1,1 72,0 Z" />
+        <circle cx="0" cy="0" r="7.8" fill="#ffd39e" fill-opacity="0.18"/>
+        <circle cx="0" cy="0" r="4.8" fill="#141b28" stroke="#ffd39e" stroke-width="1.3"/>
+        <circle cx="0" cy="0" r="2.1" fill="#ffd39e"/>
+        <text x="9.8" y="3" text-anchor="start" class="mono label-halo" font-size="8.6" font-weight="700" fill="#ffe6c4">Firebase / Supabase</text>
+      </g>
+    </g>
   </g>
 
 
-  <!-- Bottom Legend Bar -->
-  <line x1="24" y1="598" x2="1016" y2="598" stroke="#ed8326" stroke-opacity="0.25" stroke-width="1"/>
-  <g transform="translate(34, 614)" class="mono" font-size="9.2">
+  <line x1="24" y1="608" x2="1016" y2="608" stroke="#ed8326" stroke-opacity="0.25" stroke-width="1"/>
+  <g transform="translate(34, 624)" class="mono" font-size="9.2">
     <circle cx="6" cy="5" r="5" fill="url(#moonGlow)" stroke="#fff3e0" stroke-width="0.9"/>
-    <text x="18" y="8.5" fill="#ffe4be">Public GitHub Repo Moon</text>
+    <text x="18" y="8.5" fill="#ffe4be">Public GitHub Repository</text>
 
-    <circle cx="196" cy="5" r="5" fill="#1a2130" stroke="#ffd39e" stroke-width="1.3"/>
+    <circle cx="196" cy="5" r="5" fill="#141b28" stroke="#ffd39e" stroke-width="1.3"/>
     <circle cx="196" cy="5" r="2.2" fill="#ffd39e"/>
-    <text x="208" y="8.5" fill="#e6b07a">* Verified Resume System / Stack Satellite</text>
+    <text x="208" y="8.5" fill="#e6b07a">* Resume Project / Core Stack</text>
 
-    <text x="972" y="8.5" text-anchor="end" fill="#d99b66">GITHUB API VERIFIED: TS 56.9% · PY 38.8% · PS1 2.6% · GLSL 1.5% · WEB 0.4%</text>
+    <text x="972" y="8.5" text-anchor="end" fill="#d99b66">GITHUB API: TS 56.8% · PY 38.7% · PS1 2.6% · GLSL 1.5% · WEB 0.3%</text>
   </g>
 </svg>
